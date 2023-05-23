@@ -1,0 +1,30 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/gallery/index",
+		"pages/contact/index",
+		"pages/message/index"
+	],
+	"window": {
+		"navigationBarTextStyle": "black",
+		"navigationStyle": "custom"
+	},
+  "tabBar": {
+    "color": "#74787A",
+    "selectedColor": "#800000",
+    "backgroundColor": "#FFC0CB",
+    "borderStyle": "white",
+    "list": [
+      {"pagePath": "pages/index/index", "text": "请柬", "iconPath": "images/icons/invite.png", "selectedIconPath": "images/icons/invite.png"},
+      {"pagePath": "pages/gallery/index", "text": "婚照", "iconPath": "images/icons/photos.png", "selectedIconPath": "images/icons/photos.png"},
+      {"pagePath": "pages/message/index", "text": "祝福", "iconPath": "images/icons/message.png", "selectedIconPath": "images/icons/message.png"},
+      {"pagePath": "pages/contact/index", "text": "参加", "iconPath": "images/icons/hotel.png", "selectedIconPath": "images/icons/hotel.png"}
+    ]
+  },
+	"style": "v2",
+	"sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": ["audio"],
+  "usingComponents": {
+    "player": "components/player/index"
+  }
+}

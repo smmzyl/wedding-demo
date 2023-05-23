@@ -1,0 +1,366 @@
+page {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(178, 47, 55);
+  color: rgb(255, 212, 181);
+}
+.container {
+  width: 100%;
+  height: 100%;
+}
+.model {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  /* background-color: rgb(178, 47, 55); */
+}
+.model_show {
+  animation: slide-top 0.5s ease-out both;
+}
+.model_hide {
+  animation: slide-bottom 0.5s ease-out both;
+}
+.model .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* z-index: -1; */
+}
+.model .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+
+.model-0 .wedding {
+  display: block;
+  width: 251rpx;
+  height: 37rpx;
+  top: 150rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  animation: slide-from-top 0.5s ease-out both;
+}
+.model-0 .youare {
+  display: block;
+  width: 275rpx;
+  height: 33rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  animation: slide-from-top 0.5s ease-out both;
+}
+.model-0 .wujiayouxi {
+  display: block;
+  width: 75rpx;
+  height: 381rpx;
+  margin: 0 auto;
+  margin-top: 150rpx;
+  animation: scale-in 1s ease-out both 1s;
+}
+.model-0 .left-xi {
+  position: absolute;
+  left: 0;
+  top: 350rpx;
+  width: 272rpx;
+  height: 376rpx;
+  animation: slide-from-left 1s ease-out both 1s;
+}
+.model-0 .right-xi {
+  position: absolute;
+  right: 0;
+  top: 350rpx;
+  width: 272rpx;
+  height: 376rpx;
+  animation: slide-from-right 1s ease-out both 1s;
+}
+.model-0 .couple {
+  margin-top: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-in 1s ease-out both 2s;
+}
+.model-0 .couple .husband{
+  animation: slide-from-left 1s ease-out both 2s;
+}
+.model-0 .couple .wife{
+  animation: slide-from-right 1s ease-out both 2s;
+}
+.model-0 .couple .middle {
+  margin: 0 30rpx;
+}
+.model-0 .invite {
+  margin: 0 auto;
+  margin-top: 150rpx;
+  animation: fade-in 1s ease-out both 3s;
+}
+
+.model-pic{}
+.model-pic .pic{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+.model-pic.active .pic.left-in{
+  animation-name: slide-from-left;
+}
+.model-pic.active .pic.right-in{
+  animation-name: slide-from-right;
+}
+.model-pic.active .pic.top-in{
+  animation-name: slide-from-top;
+}
+.model-pic.active .pic.bottom-in{
+  animation-name: slide-from-bottom;
+}
+.model-pic.active .pic.fade-in{
+  animation-name: fade-in;
+}
+.model-pic.active .pic.scale-in{
+  animation-name: scale-in;
+}
+.model-pic.active .pic.delay-0_5s{
+  animation-delay: 0.5s;
+}
+.model-pic.active .pic.delay-1s{
+  animation-delay: 1s;
+}
+.model-pic.active .pic.delay-1_5s{
+  animation-delay: 1.5s;
+}
+.model-pic.active .pic.delay-2s{
+  animation-delay: 2s;
+}
+.model-pic.active .pic.delay-2_5s{
+  animation-delay: 2.5s;
+}
+.model-pic.active .pic.delay-3s{
+  animation-delay: 3s;
+}
+
+.model-pic.active .pic.duration-0_5s{
+  animation-duration: 0.5s;
+}
+.model-pic.active .pic.duration-1s{
+  animation-duration: 1s;
+}
+.model-pic.active .pic.duration-1_5s{
+  animation-duration: 1.5s;
+}
+.model-pic.active .pic.duration-2s{
+  animation-duration: 2s;
+}
+.model-pic.active .pic.duration-2_5s{
+  animation-duration: 2.5s;
+}
+.model-pic.active .pic.duration-3s{
+  animation-duration: 2s;
+}
+
+.model-last-2{}
+.model-last-2 .title-1{
+  margin-top: 200rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.model-last-2.active .title-1{
+  animation: slide-from-top 1s ease-out both;
+}
+.model-last-2 .map{
+  margin: 0 auto;
+  margin-top: 120rpx;
+  margin-left: 175rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 400rpx;
+  height: 400rpx;
+}
+.model-last-2.active .map{
+  animation: slide-from-top 1s ease-out both;
+}
+
+.model-last-2 .title-2{
+  font-weight: bold;
+}
+.model-last-2.active .title-2{
+  animation: slide-from-top 1s ease-out both;
+}
+.model-last-2 .part-1{
+  margin-top: 240rpx;
+  line-height: 1.5;
+  position: relative;
+}
+.model-last-2.active .part-1{
+  animation: fade-in 1s ease-out both 1s;
+}
+.model-last-2 .part-2{
+  margin-top: 120rpx;
+  line-height: 1.5;
+  position: relative;
+}
+.model-last-2.active .part-2{
+  animation: fade-in 1s ease-out both 1s;
+}
+.model-last-2 .btn-go{
+  margin: 0 auto;
+  margin-top: 10rpx;
+  font-size: 36rpx;
+  background: linear-gradient(135deg,#ff587e,#ff264a);
+  color: #fff;
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+}
+
+.model-last-1{}
+.model-last-1 .xi{
+  position: absolute;
+  left: 125rpx;
+  bottom: 100rpx;
+  width: 500rpx;
+  border-radius: 40rpx;
+}
+.model-last-1 .cover{
+  position: absolute;
+  bottom: 30rpx;
+  left: 0;
+  width: 100%;
+}
+.model-last-1 .content{
+  z-index: 2;
+  position: absolute;
+  bottom: 50rpx;
+  left: 0;
+  width: 100%;
+  color: #000;
+}
+.model-last-1 .title-1{
+  margin-top: 220rpx;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.model-last-1 .title-2{
+  margin-top: 20rpx;
+}
+.model-last-1 .btn-zhufu{
+  position: absolute;
+  bottom: 70rpx;
+  left: 110rpx;
+  font-size: 36rpx;
+  background: linear-gradient(135deg,#ff587e,#ff264a);
+  color: #fff;
+  width: 250rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+}
+.model-last-1 .btn-more{
+  position: absolute;
+  bottom: 70rpx;
+  right: 110rpx;
+  font-size: 36rpx;
+  background: linear-gradient(135deg,#ff587e,#ff264a);
+  color: #fff;
+  width: 250rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+}
+
+
+
+.slide-from-left {
+  animation: slide-from-left 1s ease-out both;
+}
+.slide-from-right {
+  animation: slide-from-right 1s ease-out both;
+}
+.slide-from-top {
+  animation: slide-from-top 1s ease-out both;
+}
+.slide-from-bottom {
+  animation: slide-from-bottom 1s ease-out both;
+}
+.fade-in {
+  animation: fade-in 1s ease-out both;
+}
+.scale-in {
+  animation: scale-in 1s ease-out both;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes slide-from-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-from-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-from-top {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scale-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

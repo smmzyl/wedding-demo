@@ -1,0 +1,16 @@
+<view class="page-contact">
+  <image lazy-load class="bg" src="../../images/red_bg.png" mode="widthFix"></image>
+
+  <view class="content">    
+    <map class="map" latitude="{{address.point[0]}}" longitude="{{address.point[1]}}" enable-3D="true" enable-building="true" markers="{{[address.marker]}}" show-location="true" data-address="{{address}}" bindmarkertap="handleGoMap"></map>
+  
+    <view class="info">
+      <view>20xx年xx月xx日 xx:00</view>
+      <view>农历：xxx月xxx（星期x）</view>
+      <view>xxx酒店  xxxxxxxxxx（xxxxx）</view>
+      <view class="btn-go" data-target="husband" bindtap="handleGoMap">去参加</view>
+    </view>
+  
+     <player></player>
+  </view>
+</view>

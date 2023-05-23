@@ -1,0 +1,64 @@
+<wxs src="../../tools.wxs" module="tools" />
+
+<view bindtouchstart="movepage" bindtouchend="movepage" class="container">
+  <view class="model model-0" wx:if="{{spage==0||epage==0}}">
+    <image lazy-load class="bg" src="../../images/red_bg.png"></image>
+    <view class="content">
+      <image lazy-load class="wedding" src="../../images/words/wedding.png"></image>
+      <image lazy-load class="youare" src="../../images/words/youare.png"></image>
+      <image lazy-load class="left-xi" src="../../images/words/xi.png"></image>
+      <image lazy-load class="right-xi" src="../../images/words/xi.png"></image>
+      <image lazy-load class="wujiayouxi" src="../../images/words/wujiayouxi.png"></image>
+      <view class="couple">
+        <view class="husband">xxx</view>
+        <view class="middle">&</view>
+        <view class="wife">xxx</view>
+      </view>
+      <view class="invite">
+        <view>2023.4.12</view>
+        <view>xxx酒店</view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:for="{{pictures}}" wx:key="index" class="model model-pic {{spage != (index + 1) ?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === (index + 1) ? 'active' : ''}}" wx:if="{{spage == (index + 1) || epage == (index + 1) || epage == (index + 1) + 1}}">
+    <image lazy-load wx:if="{{item.bg}}" class="bg" src="../../images/red_bg.png"></image>
+    <view class="content">
+      <image wx:for="{{item.children}}" wx:for-item="subItem" wx:for-index="subIndex"  wx:key="index" lazy-load class="pic {{subItem.class}}" src="{{tools.img(subItem.src)}}" style="{{subItem.style}}" mode="{{subItem.mode || 'widthFix'}}"></image>
+    </view>
+  </view>
+
+  <view class="model model-last-2 {{spage!= (len - 2) ?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage ===  (len - 2)  ? 'active' : ''}}" wx:if="{{spage== (len - 2) ||epage== (len - 2) }}">
+    <!-- 时间、地点 -->
+    <image lazy-load class="bg" src="../../images/red_bg.png"></image>
+    <view class="content">
+      <view class="title-1">恭候光临</view>
+      <view class="title-2">WEDDING INVITATION</view>
+      <map class="map" latitude="{{husband_address.point[0]}}" longitude="{{husband_address.point[1]}}" enable-3D="true" enable-building="true" markers="{{[husband_address.marker]}}" show-location="true" data-address="{{husband_address}}" bindmarkertap="goTo"></map>
+
+      <view class="part-2">
+        <view class="part-title">婚礼</view>
+        <view>20xx年xx月xx日 xx:00</view>
+        <view>农历：xxxxxx（星期x）</view>
+        <view>xxxx酒店</view>
+        <view class="btn-go" data-target="husband" bindtap="handleGoMap">去参加</view>
+      </view>
+    </view>
+  </view>
+  <view class="model model-last-1 {{spage!=(len - 1)?(spage<epage?'model_show':''):(spage<epage?'model_hide':'')}} {{epage === (len - 1) ? 'active' : ''}}" wx:if="{{spage==(len - 1)||epage==(len - 1)}}">
+    <!-- 邀请函，引导 -->
+    <image lazy-load class="bg" src="../../images/pink_bg.png"></image>
+    <image lazy-load class="xi" src="../../images/xi_bg.png" mode="widthFix"></image>
+    <image lazy-load class="cover" src="../../images/packet_bottom.png"></image>
+
+    <view class="content">
+      <view class="title-1">婚礼邀请</view>
+      <view class="title-2">xxx & xxx</view>
+
+      <view class="btn-zhufu" bindtap="handleLeaveMessage">去祝福</view>
+      <view class="btn-more" bindtap="handleGoGallery">没看够</view>
+    </view>
+  </view>
+
+  <player></player>
+</view>
